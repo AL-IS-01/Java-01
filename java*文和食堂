@@ -1,0 +1,101 @@
+package test;
+
+import java.util.Random;
+import java.util.Scanner;
+public class 文和食堂 {
+    public static void main(String[] args) {
+        System.out.println("欢迎光临文和食堂");
+        Random r = new Random();
+       int money =  r.nextInt(30);
+        System.out.println("你身上的金额"+money);
+        //1.楼层选择
+        System.out.println("请输入要前往的楼层(1，2，3)");
+        Scanner sc = new Scanner(System.in);
+        int  floor = sc.nextInt();
+        //店铺选择
+        if(floor == 1){
+            System.out.println("1.甘茗茶| 2.自选小炒| 3.沙县小吃");
+            System.out.println("请问要前往哪个窗口(输入数字)");
+         int window = sc.nextInt();
+
+        if(window == 1) {
+            System.out.println("欢迎光临，请问想喝什么？");
+            System.out.println("1.烤奶 7元|2.柠檬水 4元");
+
+            System.out.println("输入商品序号");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    if (money >= 7) {
+                        System.out.println("烤奶购买成功，余额" + (money - 7));
+                    } else System.out.println("购买失败，余额不足");
+                    break;
+                case 2:
+                    if (money >= 4) {
+                        System.out.println("柠檬汁购买成功，余额" + (money - 4));
+                    } else System.out.println("购买失败，余额不足");
+                    break;
+            }
+        }
+            if(window == 2){
+                System.out.println("欢迎光临自选小炒，请问想要什么？");
+                System.out.println("1.鱼香鸡丝 5元|2.烧鸭 6元|3.跟阿姨卖萌白嫖");
+                System.out.println("输入商品序号");
+                int choice2 = sc.nextInt();
+                switch (choice2) {
+                    case 1:
+                        if (money >= 5) {
+                            System.out.println("鱼香肉丝购买成功，余额" + (money - 5));
+                        } else System.out.println("购买失败，余额不足");
+                        break;
+                    case 2:
+                        if (money >= 6) {
+                            System.out.println("烧鸭购买成功，余额" + (money - 6));
+                        } else System.out.println("购买失败，余额不足");
+                        break;
+                    case 3:{
+                        System.out.println("敢白嫖？给你一大嘴巴子");
+                    }
+                }
+            }
+          if(window ==3){
+              System.out.println("欢迎光临沙县小吃，请问想要什么？");
+              System.out.println("1.云吞 9元|2.炸酱面 10 元| 3.阿姨的神秘料理 +5元");
+              System.out.println("输入商品序号");
+           int choice3 = sc.nextInt();
+              switch (choice3) {
+                  case 1:
+                      if (money >= 9) {
+                          System.out.println("云吞购买成功，余额" + (money - 9));
+                      } else System.out.println("购买失败，余额不足");
+                      break;
+                  case 2:
+                      if (money >= 10) {
+                          System.out.println("炸酱面YYDS，余额" + (money - 10));
+                      } else System.out.println("购买失败，余额不足");
+                      break;
+                  case 3:{
+                      System.out.println("sang值-5，生命值 + 6|余额" + (money + 5));
+                  }
+              }
+          }
+
+
+        }
+       //.二楼
+        if (floor == 2){
+            System.out.println("1.鸡公煲|2.鸡公煲|3.鸡公煲|4.我莫得选择");
+            System.out.println("请问要前往哪个窗口(输入数字)");
+        int window1 = sc.nextInt();
+        if (window1>=1 && window1<=4){
+            System.out.println("鸡公煲太贵了，还是和朋友一起来吧Ciallo~（<・ω<）⌒★");
+        }else System.out.println("莫得选择哟");
+
+        }
+     //三楼
+        if (floor == 3){
+         System.out.println("欢迎光临健身房");
+     }
+        System.out.println("欢迎再次光临文和食堂Ciallo~（<・ω<）⌒★");
+    }
+}
